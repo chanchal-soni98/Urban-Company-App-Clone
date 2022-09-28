@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 70%;
+            margin: auto;
+        }
+        #back{
+            margin-top: 30px;
+            background-color: white;
+            border: 0px;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        .mainh1{
+            font-family: os_bold;
+            font-size: 36px; 
+            font-weight: 700; 
+            line-height: 48px;
+        }
+        #flex{
+            display: grid;
+            grid-template-columns: 50% 30%;
+            gap: 20px;
+        }
+        .plan{
+            display: flex;
+            justify-content: space-around;
+            margin: -20px;
+            
+        }
+        .offer{
+            border: 1px solid gray; 
+            padding: 20px; 
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <button id="back">&#8592</button><br>
+        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_144,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1626353785493-75ebc7.png"/>
+        <h1 dir="auto" aria-level="1" role="heading" class="mainh1">Save 15% on every order + top rated professionals</h1>
+        <div id="flex">
+            <div id="left">
+                <h3>Other benefits</h3>
+                <div style="display:flex;">
+                    <div><img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,w_48,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1634028128628-b047e3.png"></div>
+                    <div>
+                        <p style="font-size: 17px; font-weight: bold;">100% moneyback guarantee</p>
+                        <p>If you save less than your membership price we refund you the difference</p>
+                    </div>
+                </div>
+                <hr style="height: 3px;">
+
+            </div>
+            <div id="right">
+                <h3>Select your plan</h3> 
+                <div class="offer">
+                    <p>BOUGHT 6 LAKH+ Times</p>
+                    <div class="plan">
+                        <h3 style="margin-left: -55px;">12 months</h3>
+                        <button style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
+                    </div>
+                    <p>&#8377 299</p>
+                </div>
+                <div class="offer">
+                    
+                    <div class="plan">
+                        <h3 style="margin-left: -55px;">6 months</h3>
+                        <button style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
+                    </div>
+                    <p>&#8377 249</p>
+                </div>
+                    
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>
