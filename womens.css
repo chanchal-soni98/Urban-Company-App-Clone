@@ -35,3 +35,23 @@
     margin-top: 30px;
     padding:30px;
 }
+#woma_2nd {
+    display: flex;
+    gap:20px;
+}
+.womapic {
+    width:90%;
+    
+
+}
+#womah {
+    display: block;
+    
+    width: 80%;
+
+    
+    
+}
+#woma_mid {
+    display: flex;
+}
