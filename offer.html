@@ -22,6 +22,7 @@
             font-size: 36px; 
             font-weight: 700; 
             line-height: 48px;
+            margin-top: -15px;
         }
         #flex{
             display: grid;
@@ -35,12 +36,39 @@
             
         }
         .offer{
-            border: 1px solid gray; 
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; 
             padding: 20px; 
             margin-bottom: 20px;
         }
-    </style>
+        .estimatedSavings{
+            display: grid;
+            grid-template-columns: 70% 30%;
+            gap: 5%;
+            margin-top: -30px;
+            grid-template-rows: 20px;
 
+        }
+        .estimatedSavings h1{
+            color: green;
+        }
+        #year{
+            display: grid;
+            grid-template-columns: repeat(6,30px);
+            grid-template-rows: 30px;
+            gap: 10px;
+        }
+        #plus{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #plus div{
+            padding: 10px;
+            border-radius: 5%;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        }
+    </style>
 </head>
 <body>
     <div id="container">
@@ -58,7 +86,50 @@
                     </div>
                 </div>
                 <hr style="height: 3px;">
+                <h4>Estimated Savings</h4>
+                <div class="estimatedSavings">
+                    <h1 id="ruppy">&#8377 1440</h1>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_profile,q_auto:low,f_auto,w_48,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1626076109261-2d8e7b.png"/>
+                </div>
+                <p style="margin-top: 50px;">No. of services / year</p>
+                <div id="year">
+                    <button onclick="btn1()">2</button>
+                    <button onclick="btn2()">4</button>
+                    <button onclick="btn3()">6</button>
+                    <button onclick="btn4()">8</button>
+                    <button onclick="btn5()">10</button>
+                    <button onclick="btn6()">12</button>
+                </div>
+                <div>
+                    <img src=""/>
+                    <p>Subscribers placed 6 orders on average in your area</p>
+                </div>
+                <hr style="height: 3px;">
 
+                <h2>Plus in numbers</h2>
+                <div id="plus">
+                    <div style="background-color: rgb(155, 173, 128)">
+                        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1636439415809-5d388a.png" alt="" loading="lazy" style="object-fit: contain;">
+                        <h5>&#8377 64 crores</h5>
+                        <p>Saved by Plus members</p>
+                    </div>
+                    <div style="background-color: rgb(114, 98, 114);">
+                        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1632141247283-8d8f28.png" alt="" loading="lazy" style="object-fit: contain;">
+                        <h5>8.6 lakh+</h5>
+                        <p>Happy Plus members</p>
+                    </div>
+                    <div style="background-color: rgb(153, 153, 100);">
+                        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1632141246979-dd9c03.png" alt="" loading="lazy" style="object-fit: contain;">
+                        <h5>4.84</h5>
+                        <p>Average rating of Plus...</p>
+                    </div>
+                    <div style="background-color: rgb(221, 166, 175);">
+                        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1636439411103-0f65a2.png" alt="" loading="lazy" style="object-fit: contain;">
+                        <h5>6.3</h5>
+                        <p>Average bookings per..</p>
+                    </div>
+                </div>
+                <hr style="height: 3px;">
             </div>
             <div id="right">
                 <h3>Select your plan</h3> 
@@ -66,7 +137,7 @@
                     <p>BOUGHT 6 LAKH+ Times</p>
                     <div class="plan">
                         <h3 style="margin-left: -55px;">12 months</h3>
-                        <button style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
+                        <button onclick="add()" id="adddd" style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
                     </div>
                     <p>&#8377 299</p>
                 </div>
@@ -74,14 +145,53 @@
                     
                     <div class="plan">
                         <h3 style="margin-left: -55px;">6 months</h3>
-                        <button style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
+                        <button onclick="add1()" id="addd" style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
                     </div>
                     <p>&#8377 249</p>
                 </div>
                     
-            
+                <div>
+                    <h3 style="text-align: center; color: rgb(105, 32, 32);">No, I will pay full price -></h3>
+                </div>
+
+                <hr style="height: 3px;">
             </div>
         </div>
     </div>
 </body>
 </html>
+<script>
+   let btn1 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "288";
+   }
+   let btn2 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "576";
+   }
+   let btn3 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "864";
+   }
+   let btn4 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "1152";
+   }
+   let btn5 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "1440";
+   }
+   let btn6 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "1728";
+   }
+   let add = ()=>{
+    let adddd = document.getElementById('adddd');
+    adddd.innerText="Remove";
+   }
+   let add1 = ()=>{
+    let adddd = document.getElementById('addd');
+    adddd.innerText="Remove";
+   }
+   
+</script>
