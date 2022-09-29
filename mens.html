@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
     <script
       src="https://kit.fontawesome.com/2ecfe8ce03.js"
       crossorigin="anonymous"
@@ -57,7 +63,9 @@
         font-weight: bold;
         margin-top: 10px;
       }
-      hr {
+      
+   hr {
+
         width: 80%;
         margin-left: 10%;
         /* border: 0.5px solid black; */
@@ -74,18 +82,27 @@
         color: rgb(84, 84, 84);
         font-family: os_semi_bold;
       }
+
+
       #ucslide{
-        display: flex;
+       display: flex;
         /* justify-content: space-evenly; */
         /* border: 1px solid red; */
         padding: 10px;
         align-items: center;
         margin-left: 80px;
-       width: 100%;
+
+        width: 100%;
+        /* height: 90%; */
+        margin-top: 50px;
+      }
+      #ucslideFirst {
+      width: 100%;
         /* height: 90%; */
         margin-top: 50px;
       }
       #ucslideFirst{
+
         text-align: center;
         width: 36%;
         font-size: 20px;
@@ -94,10 +111,16 @@
       #ucslideSecond {
         width: 100%;
       }
+
+      #ucslideSecond {
+        margin-left: 10px;
+      }
+      #ucslideSecond > img {
       #ucslideSecond{
         margin-left: 10px;
       }
       #ucslideSecond> img {
+
         margin-left: 120px;
         width: 65%;
         border-radius: 1.5%;
@@ -112,7 +135,16 @@
         background-color: white;
         color: black;
         border: 1px solid black;
-      } 
+
+      }
+      #ucslideSecond button:nth-child(2) {
+        left: 45%;
+      }
+      #ucslideSecond button:nth-child(3) {
+        right: 10.1%;
+      }
+      #uchr {
+    } 
       #ucslideSecond button:nth-child(2) {
         left: 45%;
       }
@@ -126,7 +158,10 @@
         border: 2px solid lightgray;
         color: rgb(0, 0, 0);
       }
+
+    
       #ucslideSafe{
+
         background-color: white;
         padding: 4px;
         border: 1px solid lightgray;
@@ -136,10 +171,146 @@
         width: 100px;
         height: 30px;
       }
+
+      #ucmidpart{
+        /* border: 1px solid red; */
+        padding: 10px;
+        margin-top: 20px;
+      }
+      #ucmidpart-1{
+        display: flex;
+        gap:30px;
+        width: 50%;
+        /* text-align: center; */
+        margin-left: 10%;
+        color: rgb(15, 15, 15);
+        cursor: pointer;
+      }
+      #ucmidpart-1>div{
+        /* border: 1px solid red; */
+         padding: 5px; 
+        margin-bottom: 20px;
+      }
+      #ucmidpart-1>div:hover{
+        display: block;
+        border: 3px solid blue;
+        border-radius: 5px;
+      }
+      #ucmidpart-1>div>img{
+        /* width: 80%; */
+        border-radius: 5px;
+      }
+      #ucmidpart-2{
+        margin-left: 10%;
+        margin-top: 30px;
+        border: 1px solid red;
+      }
+      #ucmidpart-2 h1{
+        margin-bottom: 30px;
+      }
+      #ucmidpart-2>hr{
+      }
+      #uc-cont-package{
+        padding: 10px;
+        margin-top: 5px;
+      }
+      .hrc1{
+        margin-top: 10px;
+        margin-bottom:10px ;
+        margin-right: 52%;
+      }
+      .uc_div_button  {
+        margin-top: 10px;
+        margin-bottom: 40px;
+      }
     </style>
   </head>
   <body>
     <div id="ucbox">
+      <div id="ucnavbarpart">
+        <div id="ucnavbar">
+          <div id="uclogo_right">
+            <img
+              src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,w_36,dpr_1,fl_progressive:steep,q_auto/images/supply/customer-app-supply/1648463875565-a4ce06.svg"
+              alt="Error"
+            />
+            <a href="#">Pune</a>
+          </div>
+          <div id="uclogo_left">
+            <a href="#">Home</a>
+            <a href="#">Bookings</a>
+            <a href="#">Blog</a>
+          </div>
+        </div>
+        <hr />
+        <div id="ucnavbarbot">
+          <a href="#">Home /</a>
+          <a href="#">Pune /</a>
+          <a href="#">Salon For Men in Pune </a>
+        </div>
+        <div id="ucslide">
+          <div id="ucslideFirst">
+            <button id="ucslideSafe">
+              <i class="fa-solid fa-square-check"></i> UC Safe
+            </button>
+            <h1>Salon For Men</h1>
+            <p><i class="fa-solid fa-star"></i> 4.75(974K)</p>
+          </div>
+          <div id="ucslideSecond">
+            <img
+              id="crauser"
+              src="https://s3-ap-southeast-1.amazonaws.com/urbanclap-prod/images/growth/home-screen/1627307561677-63fcba.jpeg"
+              alt="Error"
+            />
+            <button id="left-btn"><</button>
+            <button id="right-btn">></button>
+          </div>
+        </div>
+        <hr id="uchr" />
+      </div>
+
+      <div id="ucmidpart">
+        <div id="ucmidpart-1">
+        <div> 
+          <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1661777294120-283573.jpeg" alt="">
+          <p>Packages</p>
+        </div>
+
+        <div> 
+          <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1631190374864-78f3e8.jpeg" alt="">
+          <p>Haircut for mens& kid's</p>
+        </div>
+
+        <div> 
+          <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1631189933595-01692d.png" alt="">
+          <p>Hair Color</p>
+        </div>
+
+        <div> 
+          <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1631189957304-ea2a7b.png" alt="">
+          <p>Shave/Beard Grooming</p>
+        </div>
+
+        <div> 
+          <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1631189857376-d49e47.png" alt="">
+          <p>Face care</p>
+        </div>
+
+        <div> 
+          <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/home-screen/1631189905841-237b37.png" alt="">
+          <p>Massage Therapy</p>
+        </div>
+        </div>
+        <hr id="hr1_tag">
+        <div id="ucmidpart-2">
+          <div id="uc-container">
+            <h1>Packages</h1>
+            <div id="uc-cont-package">
+            </div>
+          </div>
+          <div id="uc-container-offer"></div>
+        </div>
+      </div>
       <div id="ucnavbar">
         <div id="uclogo_right">
           <img
@@ -183,6 +354,7 @@
 </html>
 <script>
   let imglink = [
+    "https://s3-ap-southeast-1.amazonaws.com/urbanclap-prod/images/growth/home-screen/1624984376804-17cf91.jpeg",
   "https://s3-ap-southeast-1.amazonaws.com/urbanclap-prod/images/growth/home-screen/1624984376804-17cf91.jpeg",
     "https://s3-ap-southeast-1.amazonaws.com/urbanclap-prod/images/growth/home-screen/1627307561677-63fcba.jpeg",
     "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto,w_600,dpr_1,fl_progressive:steep,q_auto/images/growth/luminosity/1655295307011-10fa33.jpeg",
@@ -211,4 +383,68 @@
     }
     crauser.src = imglink[imgstate];
   }); // slider
+</script>
+
+
+
+<script>
+ const url="https://serene-fjord-39766.herokuapp.com/api/UrbanCompany";
+ let getData=async ()=>{
+  let res=await fetch(url)
+  res=await res.json()
+  renderData(res)
+  console.log(res)
+ }
+ getData()
+ let renderData=(data)=>{
+  let cont=document.getElementById("uc-cont-package");
+  cont.innerHTML=null;
+  data.forEach(({package,title,rating,price,id,offer,Last,Last_1})=>{
+    
+    let div1=document.createElement("div")
+      
+      let pack=document.createElement("p");
+      pack.innerText=package;
+
+      let tit=document.createElement("h2");
+      tit.innerText=title;
+
+      let rat=document.createElement("p");
+      rat.innerText=rating;
+
+      let pri=document.createElement("h3");
+      pri.innerText=""+price;
+
+      let off=document.createElement("p");
+    
+      off.innerText=offer;
+      
+    
+      div1.append(pack,tit,rat,pri,off);
+      // cont.append(div1)
+
+      let div2=document.createElement("div");
+      let hrc1=document.createElement("hr");
+      hrc1.setAttribute("class","hrc1")
+      
+      div2.append(hrc1);
+      // cont.append(div2)
+
+      let div3=document.createElement("div");
+      
+      let l1=document.createElement("p");
+      l1.innerText=Last;
+
+      let l2=document.createElement("p");
+      l2.setAttribute("class","uc_div_l2")
+      l2.innerText=Last_1;
+
+      let btn=document.createElement("button");
+      btn.setAttribute("class","uc_div_button")
+      btn.innerText="ADD"
+
+      div3.append(l1,l2,btn);
+      cont.append(div1,div2,div3);
+  })
+ }
 </script>
