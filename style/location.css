@@ -68,6 +68,10 @@ margin: auto;
   height: 3.75rem;
   margin-top: 1rem;
 }
+.h3_a a{
+  text-decoration: none;
+  color: white;
+}
 #nav_1 img {
   height: 2.4375rem;
   width: 8.1875rem;
