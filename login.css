@@ -1,6 +1,28 @@
-#container{
+#hidden{
     display: flex;
-    height: 100px;
-    width: 50%;
+    height: 60px;
+    width: 40%;
+      /* border: 1px solid black;  */
+    /* justify-content: space-between; */
+  }
+  #span{
+    padding-top: 18px;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  #para{
+     padding-left: 20px;
+     padding-top: 3px;
+  }
+  #phone{
+    margin-top: 70px;
+    height: 40px;
+  }
+  #btn{
+    height: 40px;
+    width: 160px;
     border: 1px solid black;
-};
+    margin-left: 15px;
+    background-color: rgb(19, 24, 24);
+    color: white;
+  }
