@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         #container{
             width: 70%;
@@ -27,7 +28,7 @@
         #flex{
             display: grid;
             grid-template-columns: 50% 30%;
-            gap: 20px;
+            gap: 35px;
         }
         .plan{
             display: flex;
@@ -67,6 +68,14 @@
             padding: 10px;
             border-radius: 5%;
             box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        }
+        #right{
+            position: relative;
+        }
+       
+
+        .checked {
+        color: orange;
         }
     </style>
 </head>
@@ -130,6 +139,57 @@
                     </div>
                 </div>
                 <hr style="height: 3px;">
+                <h2>Hear from happy Plus members</h2>
+                <div>
+                    <h4>Vishal tripathi</h4>
+                    <span>Member sice Oct 2020</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>Fully satisfied.. Saved 1200+ till now.. I will recommend this service app to my friends.</p>
+                </div>
+                <hr style="height: 1px;">
+                <div>
+                    <h4>Stuti Gupta</h4>
+                    <span>Member sice Jan 2020</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>Fully satisfied.</p>
+                </div>
+                <hr style="height: 1px;">
+                <div>
+                    <h4>Nitin</h4>
+                    <span>Member sice March 2020</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <p>I will recommend this service app to my friends.</p>
+                </div>
+                
+                <hr style="height: 1px;  margin-bottom: 20px;">
+
+                <p style="font-size:20px;">FAQ's</p>
+                <p style="font-size: 18px;">1. What are the benifits of Plus membership?</p>
+                <p style="color: gray;">Plus membership save 15% on every order.</p>
+                <hr style="height: 1px;">
+                <p style="font-size: 18px;">2. How does 100% money back guarantee work?</p>
+                <p style="color: gray;">If a subscriber saves less than the membership price at the end of the membership period, he/she will automatically get a refund worth membership price - total discount availed as UC cash.</p>
+                <hr style="height: 1px;">
+                <p style="font-size: 18px;">3. Is there a limit to maximum discount per transaction?</p>
+                <p style="color: gray;">Yes, maximum discount per transaction is limited to 150RS.</p>
+                <hr style="height: 1px;">
+                <p style="font-size: 18px;">4. Is there a limit to number of transactions under the membership?</p>
+                <p style="color: gray;">No, there's no limit on number of transactions under the membership.</p>
+                <hr style="height: 1px;">
+                <p style="font-size: 18px;">5. Is there a limit to total maximum discount I can avail?</p>
+                <p style="color: gray;">Yes, as per our fair usage policy, the total discount you can avail is limited to 7 times the membership price you paid.</p>
             </div>
             <div id="right">
                 <h3>Select your plan</h3> 
@@ -155,12 +215,28 @@
                 </div>
 
                 <hr style="height: 3px;">
+                <div style="padding: 5px; position: fixed; width: 20%; margin-top: auto; box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;">
+                    <div style="background-color: rgb(108, 120, 108); border-radius: 5%;">
+                        <p style="padding: 5px; color: aliceblue; font-size: 18px;">&#8377 75 plus discount applied</p>
+                    </div>
+                    <div  style="display: flex; justify-content:space-between">
+                        <p>&#8377 723</p>
+                        <button onclick="next_page()" style="background-color:blueviolet; color: white; padding: 8px; border:0px;">Proceed -></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </body>
 </html>
 <script>
+    let back = document.getElementById('back')
+back.addEventListener('click',function(){
+    window.location.href='./womens.html'
+})
+    let next_page = ()=>{
+        window.location.href="./summary.html"
+    }
    let btn1 = ()=>{
     let ruppy = document.getElementById('ruppy');
     ruppy.innerText = "288";
