@@ -7,13 +7,15 @@
     <title>Urban Company</title>
     <link rel="stylesheet" href="./style/location.css" />
     <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link
       rel="icon"
       type="image/x-icon"
       href="https://res.cloudinary.com/urbanclap/image/upload/v1467812027/uc_logo.png"
     />
-    <style>
-
-    </style>
+    <style></style>
   </head>
   <body>
     <!-- main img -->
@@ -27,12 +29,11 @@
       <div>
         <h3>Blog</h3>
         <h3 class="h3">Register As A Professional</h3>
-        <h3 class="h3_a"> <a href="./login.html">Login / Sign Up</a></h3>
-      </div> 
+        <h3 class="h3_a"><a href="./login.html">Login / Sign Up</a></h3>
+      </div>
     </div>
-    <!-- hidded navbar -->
-    <div id="navbar_2"></div>
 
+    <h1 class="h1m">Home services, on demand.</h1>
     <!-- fix navbar -->
     <div id="navbar">
       <select name="" id="city">
@@ -51,9 +52,11 @@
         placeholder="Search for services"
       />
     </div>
+    <span class="p1m">Men's Therapies, Home Painting, Electricians etc.</span>
+
     <!-- category content -->
     <div id="content">
-      <div class="img_div">
+      <div class="img_div" onclick="sub_1()">
         <img src="./images/category/1.png" alt="" />
         <p>Salon For Women</p>
       </div>
@@ -95,5 +98,225 @@
         <p>Plumbers & Carpenters</p>
       </div>
     </div>
+    <!-- slider -->
+    <div id="slider">
+      <div class="carousel" data-flickity='{ "freeScroll": true }'>
+        <div class="carousel-cell">
+          <img src="./images/12.jpeg" alt="" />
+        </div>
+        <div class="carousel-cell">
+          <img src="./images/13.jpeg" alt="" />
+        </div>
+        <div class="carousel-cell">
+          <img src="./images/14.jpeg" alt="" />
+        </div>
+        <div class="carousel-cell">
+          <img src="./images/15.jpeg" alt="" />
+        </div>
+        <div class="carousel-cell">
+          <img src="./images/16.jpeg" alt="" />
+        </div>
+        <div class="carousel-cell">
+          <img src="./images/17.jpeg" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- mid div -->
+    <div id="mid_div">
+      <img src="./images/div_3.png" alt="" />
+    </div>
+    <!-- best offer -->
+    <div id="best_offer" class="slider">
+      <div>
+        <h2>Best Offers</h2>
+        <h3>Hygienic & single-use products | low-contact services</h3>
+      </div>
+      <div class="img_salon">
+        <div>
+          <img src="./images/18.jpeg" alt="" />
+          <h4>Salon For Men</h4>
+          <p>Flat 100rs off</p>
+        </div>
+        <div>
+          <img src="./images/19.jpeg" alt="" />
+          <h4>Massage for Men</h4>
+          <p>Starts at 499rs</p>
+        </div>
+        <div>
+          <img src="./images/20.jpeg" alt="" />
+          <h4>Bathroom And Kitchen Cleaning</h4>
+          <p>Started at 299rs</p>
+        </div>
+        <div>
+          <img src="./images/20.jpeg" alt="" />
+          <h4>Bathroom Cleaning</h4>
+          <p>Up to 30% off</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Appliances -->
+    <div id="best_offer" class="slider">
+      <div>
+        <h2>Appliances</h2>
+        <h3>Servicing, Repair, Installation & Uninstallation</h3>
+      </div>
+      <div class="img_salon">
+        <div>
+          <img src="./images/a.jpg" alt="" />
+          <h4>Refrigerator</h4>
+          <p></p>
+        </div>
+        <div>
+          <img src="./images/b.jpg" alt="" />
+          <h4>Geyser</h4>
+          <p>Starts at %249</p>
+        </div>
+        <div>
+          <img src="./images/c.jpg" alt="" />
+          <h4>Water Purifier</h4>
+          <p>Up to 45% off</p>
+        </div>
+        <div>
+          <img src="./images/d.jpg" alt="" />
+          <h4>Washing Machine</h4>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <!-- salon -->
+    <div id="best_offer" class="slider">
+      <div>
+        <h2>Salon, Spa and Massage services</h2>
+        <h3>Hygienic & single-use products | low-contact services</h3>
+      </div>
+      <div class="img_salon">
+        <div>
+          <img src="./images/e.jpeg" alt="" />
+          <h4>Salon At Home For Women</h4>
+          <p>Free Waxing</p>
+        </div>
+        <div>
+          <img src="./images/18.jpeg" alt="" />
+          <h4>Salon for Men</h4>
+          <p>Flat 100rs off</p>
+        </div>
+        <div>
+          <img src="./images/f.jpg" alt="" />
+          <h4>Spa For Women</h4>
+          <p>Free head massage</p>
+        </div>
+        <div>
+          <img src="./images/19.jpeg" alt="" />
+          <h4>Massage For Men</h4>
+          <p>Starts at 499</p>
+        </div>
+      </div>
+    </div>
+    <!-- cleaning -->
+    <div id="best_offer" class="slider">
+      <div>
+        <h2>Cleaning & Pest Control</h2>
+        <!-- <h3></h3> -->
+      </div>
+      <div class="img_salon">
+        <div>
+          <img src="./images/20.jpeg" alt="" />
+          <h4>Bathroom And Kitchen Cleaning</h4>
+        </div>
+        <div>
+          <img src="./images/h.jpeg" alt="" />
+          <h4>Full Home Cleaning</h4>
+        </div>
+        <div>
+          <img src="./images/i.jpeg" alt="" />
+          <h4>Sofa & Carpet Cleaning</h4>
+        </div>
+        <div>
+          <img src="./images/j.jpeg" alt="" />
+          <h4>Cockroach, Ant & General Pest Control</h4>
+        </div>
+      </div>
+    </div>
+    <!-- luxury -->
+    <div id="best_offer" class="slider">
+      <div>
+        <h2>UC Luxury Experience</h2>
+        <h3>Top Professionals | Best Brands | Premium Experience</h3>
+      </div>
+      <div class="img_salon">
+        <div>
+          <img src="./images/mface.jpg" alt="" />
+          <h4>Salon Luxe</h4>
+          <p>Free Waxing</p>
+        </div>
+        <div>
+          <img src="./images/n.jpeg" alt="" />
+          <h4>Salon For Men Royale</h4>
+          <p>Face care services starting at ₹299</p>
+        </div>
+        <div>
+          <img src="./images/o.jpg" alt="" />
+          <h4>Spa Luxe</h4>
+        </div>
+        <div>
+          <img src="./images/p.jpg" alt="" />
+          <h4>Massage Therapy For Men Royale</h4>
+        </div>
+      </div>
+    </div>
+    <!-- mid div -->
+    <div id="mid_div">
+      <img src="./images/middiv.jpeg" alt="" />
+    </div>
+    <!-- home repair  -->
+    <div id="best_offer" class="slider">
+      <div>
+        <h2>Home Repairs</h2>
+      </div>
+      <div class="img_salon">
+        <div>
+          <img src="./images/q.jpg" alt="" />
+          <h4>Carpenters</h4>
+        </div>
+        <div>
+          <img src="./images/r.jpg" alt="" />
+          <h4>Electricians</h4>
+        </div>
+        <div>
+          <img src="./images/s.jpg" alt="" />
+          <h4>Plumbers</h4>
+        </div>
+        <div>
+          <img
+            src="https://img.freepik.com/free-photo/diy-tools_144627-32173.jpg?size=626&ext=jpg"
+            alt=""
+          />
+          <h4>Painter</h4>
+        </div>
+      </div>
+    </div>
+    <!-- 2nd last div -->
+    <div id="mid_div">
+      <img src="./images/2ndlastdiv.png" alt="" />
+    </div>
+    <!-- footer  part-->
+    <div id="footer">
+      <!-- appending footer from import export -->
+    </div>
   </body>
 </html>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script>
+  let sub_1 = () => {
+    console.log(`i am here`);
+
+    window.location.href = "./womens.html";
+  };
+
+</script>
+<script type="module">
+  import { footer } from "./scripts/footer.js";
+
+  document.getElementById(`footer`).innerHTML = footer();
+</script>
