@@ -1,0 +1,57 @@
+
+  body{
+    width:85%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#woma_navbar {
+    display: flex;
+   justify-content: space-around;
+    
+    margin: auto;
+    
+}
+.woma_nav11{
+    margin-left: -650px;
+    font-weight: bold;
+    margin-top: -10px;
+    
+}
+#woma_nav1{
+    display: flex;
+    justify-content: space-evenly;
+    gap:20px;
+}
+#woma_navbar > img {
+    width:5%;
+    height:50px;
+    margin-left: -300px;
+}
+#woma_video {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding:30px;
+}
+#woma_2nd {
+    display: flex;
+    gap:20px;
+}
+.womapic {
+    width:90%;
+    
+
+}
+#womah {
+    display: block;
+    
+    width: 80%;
+
+    
+    
+}
+#woma_mid {
+    display: flex;
+}

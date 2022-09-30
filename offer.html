@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        #container{
+            width: 70%;
+            margin: auto;
+        }
+        #back{
+            margin-top: 30px;
+            background-color: white;
+            border: 0px;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        .mainh1{
+            font-family: os_bold;
+            font-size: 36px; 
+            font-weight: 700; 
+            line-height: 48px;
+            margin-top: -15px;
+        }
+        #flex{
+            display: grid;
+            grid-template-columns: 50% 30%;
+            gap: 35px;
+        }
+        .plan{
+            display: flex;
+            justify-content: space-around;
+            margin: -20px;
+            
+        }
+        .offer{
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px; 
+            padding: 20px; 
+            margin-bottom: 20px;
+        }
+        .estimatedSavings{
+            display: grid;
+            grid-template-columns: 70% 30%;
+            gap: 5%;
+            margin-top: -30px;
+            grid-template-rows: 20px;
+
+        }
+        .estimatedSavings h1{
+            color: green;
+        }
+        #year{
+            display: grid;
+            grid-template-columns: repeat(6,30px);
+            grid-template-rows: 30px;
+            gap: 10px;
+        }
+        #plus{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        #plus div{
+            padding: 10px;
+            border-radius: 5%;
+            box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+        }
+        #right{
+            position: relative;
+        }
+       
+
+        .checked {
+        color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button id="back">&#8592</button><br>
+        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_144,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1626353785493-75ebc7.png"/>
+        <h1 dir="auto" aria-level="1" role="heading" class="mainh1">Save 15% on every order + top rated professionals</h1>
+        <div id="flex">
+            <div id="left">
+                <h3>Other benefits</h3>
+                <div style="display:flex;">
+                    <div><img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,w_48,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1634028128628-b047e3.png"></div>
+                    <div>
+                        <p style="font-size: 17px; font-weight: bold;">100% moneyback guarantee</p>
+                        <p>If you save less than your membership price we refund you the difference</p>
+                    </div>
+                </div>
+                <hr style="height: 3px;">
+                <h4>Estimated Savings</h4>
+                <div class="estimatedSavings">
+                    <h1 id="ruppy">&#8377 1440</h1>
+                    <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_profile,q_auto:low,f_auto,w_48,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1626076109261-2d8e7b.png"/>
+                </div>
+                <p style="margin-top: 50px;">No. of services / year</p>
+                <div id="year">
+                    <button onclick="btn1()">2</button>
+                    <button onclick="btn2()">4</button>
+                    <button onclick="btn3()">6</button>
+                    <button onclick="btn4()">8</button>
+                    <button onclick="btn5()">10</button>
+                    <button onclick="btn6()">12</button>
+                </div>
+                <div>
+                    <img src=""/>
+                    <p>Subscribers placed 6 orders on average in your area</p>
+                </div>
+                <hr style="height: 3px;">
+
+                <h2>Plus in numbers</h2>
+                <div id="plus">
+                    <div style="background-color: rgb(155, 173, 128)">
+                        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1636439415809-5d388a.png" alt="" loading="lazy" style="object-fit: contain;">
+                        <h5>&#8377 64 crores</h5>
+                        <p>Saved by Plus members</p>
+                    </div>
+                    <div style="background-color: rgb(114, 98, 114);">
+                        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1632141247283-8d8f28.png" alt="" loading="lazy" style="object-fit: contain;">
+                        <h5>8.6 lakh+</h5>
+                        <p>Happy Plus members</p>
+                    </div>
+                    <div style="background-color: rgb(153, 153, 100);">
+                        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1632141246979-dd9c03.png" alt="" loading="lazy" style="object-fit: contain;">
+                        <h5>4.84</h5>
+                        <p>Average rating of Plus...</p>
+                    </div>
+                    <div style="background-color: rgb(221, 166, 175);">
+                        <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1636439411103-0f65a2.png" alt="" loading="lazy" style="object-fit: contain;">
+                        <h5>6.3</h5>
+                        <p>Average bookings per..</p>
+                    </div>
+                </div>
+                <hr style="height: 3px;">
+                <h2>Hear from happy Plus members</h2>
+                <div>
+                    <h4>Vishal tripathi</h4>
+                    <span>Member sice Oct 2020</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>Fully satisfied.. Saved 1200+ till now.. I will recommend this service app to my friends.</p>
+                </div>
+                <hr style="height: 1px;">
+                <div>
+                    <h4>Stuti Gupta</h4>
+                    <span>Member sice Jan 2020</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>Fully satisfied.</p>
+                </div>
+                <hr style="height: 1px;">
+                <div>
+                    <h4>Nitin</h4>
+                    <span>Member sice March 2020</span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <p>I will recommend this service app to my friends.</p>
+                </div>
+                
+                <hr style="height: 1px;  margin-bottom: 20px;">
+
+                <p style="font-size:20px;">FAQ's</p>
+                <p style="font-size: 18px;">1. What are the benifits of Plus membership?</p>
+                <p style="color: gray;">Plus membership save 15% on every order.</p>
+                <hr style="height: 1px;">
+                <p style="font-size: 18px;">2. How does 100% money back guarantee work?</p>
+                <p style="color: gray;">If a subscriber saves less than the membership price at the end of the membership period, he/she will automatically get a refund worth membership price - total discount availed as UC cash.</p>
+                <hr style="height: 1px;">
+                <p style="font-size: 18px;">3. Is there a limit to maximum discount per transaction?</p>
+                <p style="color: gray;">Yes, maximum discount per transaction is limited to 150RS.</p>
+                <hr style="height: 1px;">
+                <p style="font-size: 18px;">4. Is there a limit to number of transactions under the membership?</p>
+                <p style="color: gray;">No, there's no limit on number of transactions under the membership.</p>
+                <hr style="height: 1px;">
+                <p style="font-size: 18px;">5. Is there a limit to total maximum discount I can avail?</p>
+                <p style="color: gray;">Yes, as per our fair usage policy, the total discount you can avail is limited to 7 times the membership price you paid.</p>
+            </div>
+            <div id="right">
+                <h3>Select your plan</h3> 
+                <div class="offer">
+                    <p>BOUGHT 6 LAKH+ Times</p>
+                    <div class="plan">
+                        <h3 style="margin-left: -55px;">12 months</h3>
+                        <button onclick="add()" id="adddd" style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
+                    </div>
+                    <p>&#8377 299</p>
+                </div>
+                <div class="offer">
+                    
+                    <div class="plan">
+                        <h3 style="margin-left: -55px;">6 months</h3>
+                        <button onclick="add1()" id="addd" style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
+                    </div>
+                    <p>&#8377 249</p>
+                </div>
+                    
+                <div>
+                    <h3 style="text-align: center; color: rgb(105, 32, 32);">No, I will pay full price -></h3>
+                </div>
+
+                <hr style="height: 3px;">
+                <div style="padding: 5px; position: fixed; width: 20%; margin-top: auto; box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;">
+                    <div style="background-color: rgb(108, 120, 108); border-radius: 5%;">
+                        <p style="padding: 5px; color: aliceblue; font-size: 18px;">&#8377 75 plus discount applied</p>
+                    </div>
+                    <div  style="display: flex; justify-content:space-between">
+                        <p>&#8377 723</p>
+                        <button onclick="next_page()" style="background-color:blueviolet; color: white; padding: 8px; border:0px;">Proceed -></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let next_page = ()=>{
+        window.location.href="./summary.html"
+    }
+   let btn1 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "288";
+   }
+   let btn2 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "576";
+   }
+   let btn3 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "864";
+   }
+   let btn4 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "1152";
+   }
+   let btn5 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "1440";
+   }
+   let btn6 = ()=>{
+    let ruppy = document.getElementById('ruppy');
+    ruppy.innerText = "1728";
+   }
+   let add = ()=>{
+    let adddd = document.getElementById('adddd');
+    adddd.innerText="Remove";
+   }
+   let add1 = ()=>{
+    let adddd = document.getElementById('addd');
+    adddd.innerText="Remove";
+   }
+   
+</script>
