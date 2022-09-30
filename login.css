@@ -1,7 +1,8 @@
 #hidden{
     display: flex;
     height: 60px;
-    width: 40%;
+    width: 80%;
+ 
       /* border: 1px solid black;  */
     /* justify-content: space-between; */
   }
@@ -9,6 +10,7 @@
     padding-top: 18px;
     padding-left: 10px;
     cursor: pointer;
+    
   }
   #para{
      padding-left: 20px;
@@ -17,12 +19,22 @@
   #phone{
     margin-top: 70px;
     height: 40px;
+    
   }
   #btn{
     height: 40px;
     width: 160px;
     border: 1px solid black;
-    margin-left: 15px;
+    margin-left: 25px;
     background-color: rgb(19, 24, 24);
     color: white;
   }
+  .sidebar{
+    position: fixed;
+    width: 300px;
+    /* border: 1px solid black; */
+     height: 100%;
+     right: 0;
+     background-color: white;
+  }
+  

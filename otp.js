@@ -7,6 +7,7 @@ let ip4=document.getElementById("ip4").value;
 let obj={ip1,ip2,ip3,ip4};
 console.log(obj);
 localStorage.setItem("otp_data",JSON.stringify(obj));
+window.location.href="landing.html"
 };
 
 let back=()=>{
