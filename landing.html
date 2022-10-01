@@ -63,6 +63,16 @@
     </div>
   </body>
 </html>
+<script>
+
+console.log(city);
+
+city.addEventListener('change', (e) => {
+  let city = document.getElementById(`city`).value;
+    window.location.href = "./location.html"
+});
+
+</script>
 <script type="module">
 
   import {footer} from "./scripts/footer.js"

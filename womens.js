@@ -10,6 +10,7 @@ let getData = async () => {
 
     let res = await fetch(url)
     res = await res.json();
+    console.log('res:', res)
    
     render_dom(res)
 
