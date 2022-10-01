@@ -4,45 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-#container{
-    display: flex;
-  
-    height: 544px;
-    width: 640px;
-    border-radius: 5px;
-    border:1px solid black;
-    margin: auto;
-}
-</style>
+    <title>Address</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://res.cloudinary.com/urbanclap/image/upload/v1467812027/uc_logo.png"
+    />
+    <link rel="stylesheet" href="./style/address.css">
 </head>
-
 <body>
-    <div id="container">
-<div id="first">
-   <img src="./images/map.jpeg"> 
-</div>
-<div id="second">
-    <div id="one">
-        <h3>Dhantoli</h3>
-        <p>Dhantoli,Nagpur,Maharastra</p>
-        <p>440012</p>
+   <div id="container">
+    <div class="img_div">
+        <img src="./images/maps.png" alt="">
     </div>
-    <div id="two">
-        <button id="c_button">change</button>
+    <div class="content">
+        
+        <div class="div_1">
+            <h3>University Rd</h3>
+            <p>University Rd, University Area,Ahmedabad, Gujarat 380009, India
+            </p>
+            <button>Change</button>
+        </div>
+
+        <div id="adinput">
+            <input type="text" name="" placeholder="House/Flat Number">
+            <input type="text" name="" id="" placeholder="Landmark(Optional)">
+        </div>
+        <!-- buttons -->
+        <div id="btns">
+            <p>Save as</p>
+            <button>Home</button>
+            <button>Other</button>
+        </div>
+        <!-- main btn -->
+        <div id="main_btn">
+            <button id="mainbtn">Save and proceed to slots</button>
+        </div>
     </div>
-
-    <input type="" placeholder="House/flat Number*">
-    <input type="text" placeholder="Landmark(optional)">
-    <p>Save as</p>
-
-    <div id="three"><button>Home</button></div>
-    <div id="four"><button>Other</button></div>
-    
-    <button>Save and procced</button>
-</div>
-
-    </div>
+   </div>
 </body>
 </html>
+<script>
+    let mainbtn = document.getElementById(`mainbtn`);
+    mainbtn.addEventListener('click', (e) => {
+        window.location.href  = ""
+    });
+</script>
