@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link
       rel="icon"
       type="image/x-icon"
       href="https://res.cloudinary.com/urbanclap/image/upload/v1467812027/uc_logo.png"
@@ -13,6 +17,9 @@
     <link rel="stylesheet" href="./style/address.css">
 </head>
 <body>
+    <div id="xsym">
+        <i class="fa-solid fa-circle-xmark"></i>
+    </div>
    <div id="container">
     <div class="img_div">
         <img src="./images/maps.png" alt="">
@@ -47,6 +54,6 @@
 <script>
     let mainbtn = document.getElementById(`mainbtn`);
     mainbtn.addEventListener('click', (e) => {
-        window.location.href  = ""
+        window.location.href  = "./payment.html"
     });
 </script>
