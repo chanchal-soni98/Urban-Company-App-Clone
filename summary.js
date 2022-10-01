@@ -2,13 +2,21 @@ let back = document.getElementById('back')
 back.addEventListener('click',function(){
     window.location.href='./offer.html'
 });
+
+function next_page(){
+    window.location.href='./address.html'
+}
 let cartLs = JSON.parse(localStorage.getItem("cart")) || [];
 let totalPrice = document.getElementById('totalPrice');
+
+
 let count = 0;
 for(let i=0;i<cartLs.length;i++){
-    count+=(+cartLs[i].price);
+    count+=(+cartLs[i].price)
+    // count+=(Number(cartLs[i].price)*(cartLs[i].quantity));
 }
 totalPrice.innerText = count;
+
 
 let total = document.getElementById('total');
 total.innerText = count+70
@@ -96,24 +104,30 @@ renderData();
 removerProduct = (i)=>{
     cartLs.splice(i,1);
     renderData(cartLs);
-    localStorage.setItem('cart',JSON.stringify(cartLs))
+    localStorage.setItem('cart',JSON.stringify(cartLs));
+    renderData(cartLs);
+    
 }
 
 let decrement = (i)=>{
     if(cartLs[i].quantity===1){
         return;
     }
-    cartLs[i].quantity--;
+    // let quant = --cartLs[i].quantity;
+     cartLs[i].quantity--;
     
-    console.log(totalCount);
+    //  console.log('q',quant);
     renderData()
+    // localStorage.setItem('cart',JSON.stringify(cartLs))
 }
 let increment = (i)=>{
     if(cartLs[i].quantity===3){
         return;
     }
-    cartLs[i].quantity++;
-    console.log(totalCount);
+    cartLs[i].quantity++
+    // let quant=++cartLs[i].quantity;
+    //console.log('q',quant);
+    // console.log(totalCount);
     renderData()
 }
 
@@ -159,7 +173,7 @@ let increment = (i)=>{
         let price = document.createElement('p');
         price.innerText = el.price;
 
-        div.append(img,p,price);
+        div.append(img,p);
         freq_prod.append(div)
 
     });
