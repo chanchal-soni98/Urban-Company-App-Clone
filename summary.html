@@ -8,7 +8,7 @@
     <style>
         
         #container{
-            width: 80%;
+            width: 70%;
             margin: auto;
         }
         #back{
@@ -26,7 +26,7 @@
         .headbtn{
             display:flex;
             justify-content: space-between;
-            width: 70%;
+            width: 80%;
         }
         #main{
             display: grid;
@@ -62,8 +62,11 @@
         .div2{
             margin-top: 22px;
             background-color: #6e42e5;
-            width: 60px;
+            width: 55px;
             height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
         }
         .minus, .plus,.span{
             background-color: #6e42e5;
@@ -77,6 +80,21 @@
             border: 0px;
             padding: 10px;
             color: rgb(129, 185, 129);
+        }
+        .remove{
+            background-color: gray;
+            border-radius: 10px;
+            border: 0px;
+            padding: 5px;
+            color: white;
+        }
+        #proceed{
+            width: 170px; 
+            background-color:#6e42e5; 
+            color: white; padding: 8px; 
+            border:0px; 
+            font-weight: 600;
+            border-radius: 20px;
         }
        
     </style>
@@ -126,7 +144,7 @@
                     </div>
                     <div  style="display: flex; justify-content:space-between">
                         <p id="showAmt"></p>
-                        <button onclick="next_page()" style="width: 170px; background-color:#6e42e5; color: white; padding: 8px; border:0px; font-weight: 600;">Proceed -></button>
+                        <button id="proceed" onclick="next_page()">Proceed -></button>
                     </div>
                 </div>
             </div>

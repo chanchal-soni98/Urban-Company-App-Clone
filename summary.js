@@ -33,8 +33,9 @@ let tip4 = document.querySelector('#tip4').innerText
 function add_tip4(){
     showAmt.innerText = +(total.innerText)+(+tip4);
 };
-let amt_obj = JSON.parse(localStorage.getItem('amt_obj'));
-localStorage.setItem('amt_obj',JSON.stringify(amt_obj))
+// let amt_obj = JSON.parse(localStorage.getItem('amt_obj'));
+// amt_obj = showAmt.innerText;
+// localStorage.setItem('amt_obj',JSON.stringify(amt_obj))
 
 
 function renderData(){
@@ -78,11 +79,25 @@ function renderData(){
     let price = document.createElement('p');
     price.innerText = +el.price;
 
-    div.append(div1,com1,com2,com3,price);
+    let remove_btn = document.createElement('button');
+    remove_btn.innerText="Remove";
+    remove_btn.setAttribute('class','remove');
+    remove_btn.addEventListener('click',function(){
+        removerProduct(i)
+    })
+
+    div.append(div1,com1,com2,com3,price,remove_btn);
     products.append(div);
   });
 }
-renderData()
+renderData();
+
+
+removerProduct = (i)=>{
+    cartLs.splice(i,1);
+    renderData(cartLs);
+    localStorage.setItem('cart',JSON.stringify(cartLs))
+}
 
 let decrement = (i)=>{
     if(cartLs[i].quantity===1){

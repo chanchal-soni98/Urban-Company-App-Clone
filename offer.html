@@ -78,6 +78,14 @@
         .checked {
         color: orange;
         }
+        #proceed{
+            width: 170px; 
+            background-color:#6e42e5; 
+            color: white; padding: 8px; 
+            border:0px; 
+            font-weight: 600;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
@@ -103,12 +111,12 @@
                 </div>
                 <p style="margin-top: 50px;">No. of services / year</p>
                 <div id="year">
-                    <button onclick="btn1()">2</button>
-                    <button onclick="btn2()">4</button>
-                    <button onclick="btn3()">6</button>
-                    <button onclick="btn4()">8</button>
-                    <button onclick="btn5()">10</button>
-                    <button onclick="btn6()">12</button>
+                    <button id="offer1" onclick="btn1()">2</button>
+                    <button id="offer2" onclick="btn2()">4</button>
+                    <button id="offer3" onclick="btn3()">6</button>
+                    <button id="offer4" onclick="btn4()">8</button>
+                    <button id="offer5" onclick="btn5()">10</button>
+                    <button id="offer6" onclick="btn6()">12</button>
                 </div>
                 <div>
                     <img src=""/>
@@ -200,7 +208,7 @@
                         <h3 style="margin-left: -55px;">12 months</h3>
                         <button onclick="add()" id="adddd" style="width: 50px; border: 0px; color: #6e42e5; background-color: white; font-size: 18px;">Add</button>
                     </div>
-                    <p>&#8377 299</p>
+                    <p id="twe">299</p>
                 </div>
                 <div class="offer">
                     
@@ -208,7 +216,7 @@
                         <h3 style="margin-left: -55px;">6 months</h3>
                         <button onclick="add1()" id="addd" style="width: 50px; border: 0px; color: #6e42e5; background-color: white; font-size: 18px;">Add</button>
                     </div>
-                    <p>&#8377 249</p>
+                    <p id="six">249</p>
                 </div>
                     
                 <div>
@@ -221,8 +229,8 @@
                         <p style="padding: 5px;  font-size: 18px;">&#8377 75 plus discount applied</p>
                     </div>
                     <div  style="display: flex; justify-content:space-between">
-                        <p>&#8377 723</p>
-                        <button onclick="next_page()" style="background-color:#6e42e5; color: white; padding: 8px; border:0px;">Proceed &#8594</button>
+                        <p id="offer_amt"></p>
+                        <button id="proceed" onclick="next_page()">Proceed &#8594</button>
                     </div>
                 </div>
             </div>
@@ -231,6 +239,8 @@
 </body>
 </html>
 <script>
+
+
     let nextPage = document.getElementById('nextPage');
     nextPage.addEventListener('click',function(){
         window.location.href="./summary.html"
@@ -241,38 +251,64 @@
     })
 
     let next_page = ()=>{
-        window.location.href="./summary.html"
+        window.location.href="./summary.html";
     }
+     let offer_amt = document.getElementById('offer_amt');
+
+     let cartLs = JSON.parse(localStorage.getItem("cart")) || [];
+        let count = 0;
+        for(let i=0;i<cartLs.length;i++){
+            count+=(+cartLs[i].price);
+        }
+        offer_amt.innerText = +(count+70);
+
+        // let total = document.getElementById('total');
+        // total.innerText = count+70
+    // let offer1 = document.querySelector('#offer1');
+    // function btn1(){
+    //     offer_amt.innerText = 300
+    // }
    let btn1 = ()=>{
     let ruppy = document.getElementById('ruppy');
     ruppy.innerText = "288";
+    offer_amt.innerText =count +70+288;
    }
    let btn2 = ()=>{
     let ruppy = document.getElementById('ruppy');
     ruppy.innerText = "576";
+    offer_amt.innerText = count +70+576;
    }
    let btn3 = ()=>{
     let ruppy = document.getElementById('ruppy');
     ruppy.innerText = "864";
+    offer_amt.innerText =count +70+ 864;
    }
    let btn4 = ()=>{
     let ruppy = document.getElementById('ruppy');
     ruppy.innerText = "1152";
+    offer_amt.innerText =count +70+ 1152;
    }
    let btn5 = ()=>{
     let ruppy = document.getElementById('ruppy');
     ruppy.innerText = "1440";
+    offer_amt.innerText =count +70+ 1440;
    }
    let btn6 = ()=>{
     let ruppy = document.getElementById('ruppy');
     ruppy.innerText = "1728";
+    offer_amt.innerText =count +70+ 1728;
+    
    }
    let add = ()=>{
     let adddd = document.getElementById('adddd');
+    let twe = document.getElementById('twe').innerText;
+    offer_amt.innerText=+offer_amt.innerText+ (+twe);
     adddd.innerText="Remove";
    }
    let add1 = ()=>{
     let adddd = document.getElementById('addd');
+    let six = document.getElementById('six').innerText;
+    offer_amt.innerText=+offer_amt.innerText+ (+six);
     adddd.innerText="Remove";
    }
    
