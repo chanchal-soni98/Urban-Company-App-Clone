@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: axiforma-regular, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      #navbar_2 {
+        /* border: 1px solid red; */
+        /* Font & Text */
+     background-color: aqua;
+        font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        /* Box */
+        height: 85px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 8px 26px 0px;
+      }
+      #search {
+        /* border: 1px solid red; */
+        /* Font & Text */
+        font-family: axiforma-regular, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 16px;
+
+        /* Box */
+        height: 46px;
+        width: 542px;
+        padding: 0px 16px 0px 0px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 72px;
+        margin-top: .9375rem;
+      }
+      /* content */
+      .cont {
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+      .img_div {
+        /* border: 1px solid red; */
+        /* Font & Text */
+        font-family: axiforma-regular, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: 400;
+
+        /* Color & Background */
+        color: rgb(0, 0, 0);
+
+        /* Box */
+        /* height: 70px; */
+        width: 60%;
+        /* padding: 4px; */
+        /* line-height: 0.625rem; */
+      }
+      .img_div img {
+        width: 2rem;
+        height: 2rem;
+      }
+      .img_div:hover {
+        background-color: rgba(156, 162, 167, 0.186);
+        /* width: auto; */
+        /* height: auto; */
+      }
+     .sticky{
+        position: fixed;
+        top: 0;
+        left: 0;
+
+      }
+      .sticky::after{
+        display: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus fugit
+        at exercitationem asperiores optio temporibus amet impedit quos
+        similique sed totam ullam neque nemo architecto odio eligendi natus id
+        beatae eius laboriosam accusamus, libero maxime? In quod inventore
+        maiores officia odit earum, soluta neque, obcaecati, veniam quas
+        asperiores doloribus velit? Expedita magni perspiciatis consequuntur
+        quasi nobis iure asperiores tenetur libero et dolorem pariatur,
+        molestias, voluptatem assumenda. Modi hic aperiam ea nam nulla mollitia
+        sit veniam, illo tempora aspernatur pariatur placeat omnis in.
+        Praesentium perspiciatis eligendi nostrum, illum labore exercitationem
+        minima fugiat? Quam fugit a consectetur quod ab, voluptates eum et!
+      </h1>
+    </div>
+    <div id="navbar_2" class="navbar-fixed-top">
+      <input
+        type="text"
+        name=""
+        id="search"
+        placeholder="Search for services"
+      />
+      <div class="cont" id="menu">
+        <div class="img_div">
+          <img src="./images/category/1.png" alt="" />
+          <p>Salon For Women</p>
+        </div>
+        <div class="img_div">
+          <img src="./images/category/2.png" alt="" />
+          <p>Hair Services For Women</p>
+        </div>
+        <div class="img_div">
+          <img src="./images/category/3.png" alt="" />
+          <p>Women's Therapies</p>
+        </div>
+        <div class="img_div">
+          <img src="./images/category/4.png" alt="" />
+          <p>Salon for Men</p>
+        </div>
+        <div class="img_div">
+          <img src="./images/category/5.png" alt="" />
+          <p>Men's Therapies</p>
+        </div>
+      </div>
+    </div>
+    <h1>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, neque! Vel
+      odit maiores minima tenetur repudiandae officia, nihil asperiores
+      veritatis, possimus quaerat explicabo aperiam ex natus excepturi inventore
+      nostrum. Error fugit dolore tempore voluptatum amet ut labore sapiente, ab
+      accusantium distinctio fuga dicta nobis praesentium odit voluptatibus
+      tenetur exercitationem recusandae? Fugit ea illum eligendi necessitatibus,
+      blanditiis repellendus facilis. Molestias, eaque. Veritatis, in, rem
+      facilis quis ad libero maiores voluptate, dignissimos quisquam tempore
+      sequi odio! Maxime, culpa beatae? Optio, earum! Est eligendi eius, error
+      libero, totam odit doloremque quia quo, eum a nulla? Dolores sunt maiores
+      saepe iste, adipisci nesciunt deserunt nobis praesentium totam facere.
+      Consectetur dolorem, ipsum sint odio explicabo repellendus, nemo maiores
+      quae cum repudiandae impedit animi unde? Obcaecati dolorem accusantium
+      tenetur quibusdam dolor. Corporis nisi sed illum fugit veritatis eligendi
+      molestias quo voluptatem, quia cum reprehenderit provident eos nemo alias
+      non. Vitae sapiente adipisci neque facilis odit, aspernatur earum officiis
+      cum nobis atque. Aliquid quibusdam nobis at dolor ex voluptatem, voluptate
+      ea expedita modi impedit placeat nisi, ullam delectus sapiente reiciendis
+      et exercitationem numquam harum aut eos ab velit! Eum totam ex itaque
+      sequi asperiores placeat debitis consequuntur ducimus cum iste, ullam quo
+      adipisci optio suscipit praesentium perspiciatis unde sint magnam maxime
+      similique? Quod quas eaque, autem esse in, deleniti quos qui aut itaque,
+      totam nobis voluptatum? Exercitationem molestiae atque iste error
+      praesentium dicta asperiores iure maiores totam ex. Voluptatem ullam,
+      illum dolore magnam labore aspernatur esse! Blanditiis ut autem facere
+      natus sunt, sed, voluptate repellat officiis veniam modi amet nesciunt,
+      accusantium fugit tempore similique deleniti reiciendis mollitia fugiat?
+      Reprehenderit exercitationem eos officiis cupiditate vel minus quae a
+      facilis incidunt facere nobis debitis iste deleniti, corrupti minima?
+      Ipsam magnam distinctio harum fuga maxime repellendus sit veritatis
+      repellat vel eligendi nemo, sed labore itaque tempore voluptatum
+      accusantium. Atque, eius aspernatur aliquam totam odit incidunt ducimus
+      temporibus. Alias in distinctio ullam nihil, aperiam est nostrum quo nobis
+      debitis mollitia nesciunt eaque maxime quia quasi iure. Voluptatum,
+      consequuntur itaque blanditiis recusandae odio aliquid amet tenetur a
+      commodi saepe aut quisquam consectetur dignissimos ea aliquam. Eveniet
+      laborum adipisci minus unde blanditiis, consequuntur, aspernatur fuga
+      fugit eligendi earum et, reprehenderit autem iste expedita neque
+      repudiandae deleniti labore quisquam illum aliquid! Vel itaque ullam
+      voluptatum, ab nostrum voluptates eius ipsa eos facere, culpa quia
+      perferendis neque ad vitae dolores, cupiditate asperiores. Tenetur,
+      eligendi cumque, cum quae consectetur eveniet excepturi vitae eos, enim
+      hic illo!
+    </h1>
+  </body>
+</html>
+<script>
+  let navbar_2 = document.getElementById(`navbar_2`);
+  let menu = document.getElementById(`menu`);
+
+window.onscroll = () => {
+  if(window.pageYOffset >= menu.offsetTop){
+    navbar_2.classList.add("sticky");
+  }else{
+    navbar_2.classList.remove("sticky");
+  }
+}
+
+
+</script>
