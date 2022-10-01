@@ -1,6 +1,46 @@
-#container{
+#hidden{
     display: flex;
-    height: 100px;
-    width: 50%;
+    height: 60px;
+    width: 80%;
+ 
+      /* border: 1px solid black;  */
+    /* justify-content: space-between; */
+  }
+  #span{
+    padding-top: 18px;
+    padding-left: 10px;
+    cursor: pointer;
+    
+  }
+  #para{
+     padding-left: 20px;
+     padding-top: 3px;
+  }
+  #phone{
+    margin-top: 70px;
+    height: 40px;
+    
+  }
+  #btn{
+    height: 40px;
+    width: 160px;
     border: 1px solid black;
-};
+    margin-left: 30px;
+    background-color: rgb(19, 24, 24);
+    color: white;
+  }
+  .sidebar{
+    position: fixed;
+    width: 300px;
+    /* border: 1px solid black; */
+     height: 100%;
+     right: 0;
+     background-color: white;
+     margin-top: -10px;
+     padding: 10px;
+  }
+  body background{
+  height: 500px;
+  width: 800px;
+  }
+  

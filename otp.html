@@ -7,10 +7,11 @@
     <title>Document</title>
      <style>
       #sec {
-    width: 25%;
+    width: 100%;
  margin-left: 50px;
     /* margin-top: 40px; */
     height: 100px;
+
     /* border: 1px solid red; */
     /* display: flex;
     justify-content: space-evenly;
@@ -19,47 +20,23 @@
 
  #sec>input {
     height: 40px;
-    width: 40px;
+    width: 30px;
     border: 1px solid rgb(91, 101, 100);
     border-radius: 5px;
-    font-size: 46px;
-    /* text-align: center; */
-    /* margin-left: 10px; */
+    font-size: 25px;
+    text-align: center; 
+ 
+    margin-left: 5px; 
 }
-
-/* #sec+button {
-    background-color: rgb(3, 177, 162);
-    color: white;
-    display: block;
-    margin: auto;
-    padding: 10px 40px;
-    border-radius: 5px;
-    border: 0px;
-    font-size: 14px;
-    font-weight: bolder;
-    margin-top: 10px;
-}
-
-#sec+button+p {
-    text-align: center;
-    margin-top: 8px;
-    font-size: 15px;
-}
-
-#sec+button+p+p {
-    text-align: center;
-    font-size: 15px;
-    margin-top: 5px;
-}   */
 #hidden{
     display: flex;
-    height: 60px;
-    width: 40%;
+    height: 40px;
+    width: 80%;
      /* border: 1px solid black; */
     /* justify-content: space-between; */
   }
   #span{
-    padding-top: 18px;
+    padding-top: 15px;
     padding-left: 10px;
     cursor: pointer;
   }
@@ -78,36 +55,53 @@ font-size: 14px;
   #sec button{
     height: 40px;
     width: 160px;
-    border: 1px solid black;
+     border: 1px solid black;
     margin-left: 15px;
     background-color: rgb(19, 24, 24);
     color: white;
   }
+  .sidebar{
+    position: fixed;
+    width: 300px;
+    /* border: 1px solid black; */
+     height: 100%;
+     right: 0;
+     background-color: white;
+     margin-top: -10px;
+  }
+  body{
+    height: 550px;
+  width: 1261px;
+  }
+ 
     </style>
 </head>
-<body>
+<body background="./images/otp.png">
 
-    <div id="hidden">
-        <span onclick="back()" id="span">&#8592;</span>
-        <p id="para">please login to continue<p/>
-      </div>
+<div class="sidebar">
 
-      <div id="desc">
-        <h3>Enter verification code</h3>
-        <p>We have sent you a 4 digit otp</p>
-        <p>on 9637170017<a href="login.html">edit</a></p>
-    </div>
-    
+  <div id="hidden">
+    <span onclick="back()" id="span">&#8592;</span>
+    <p id="para">please login to continue<p/>
+  </div>
 
-    <div id="sec">
-        <input id="ip1" type="text">
-        <input id="ip2" type="text">
-        <input id="ip3" type="text">
-        <input id="ip4" type="text"><br><br>
-  <button id="btn" onclick="login()">login</button>
+  <div id="desc">
+    <h3>Enter verification code</h3>
+    <p>We have sent you a 4 digit otp</p>
+    <p>on 9637170017<a href="login.html">edit</a></p>
 </div>
 
 
+<div id="sec">
+    <input id="ip1" type="text">
+    <input id="ip2" type="text">
+    <input id="ip3" type="text">
+    <input id="ip4" type="text"><br><br>
+<button id="btn" onclick="login()">login</button>
+</div>
+
+</div>
 </body>
+
 </html>
 <script src="otp.js"></script>

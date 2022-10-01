@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        #container{
+            width: 80%;
+            margin: auto;
+        }
+        #back{
+            margin-top: 30px;
+            background-color: white;
+            border: 0px;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        #first{
+            display:flex;
+            gap: 3%;
+            margin-bottom: -20px;
+        }
+        .headbtn{
+            display:flex;
+            justify-content: space-between;
+            width: 70%;
+        }
+        #main{
+            display: grid;
+            grid-template-columns: 60% 30%;
+            gap: 35px;
+        }
+        .r1{
+            display: grid;
+            grid-template-columns: 50% 50%;
+            justify-content: space-between;
+            margin-top: -20px;
+        }
+        #freq_prod{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+        }
+        
+        #freq_prod div{
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 10px;
+        }
+        #freq_prod div p{
+           text-align: center;
+           color: gray;
+        }
+        #freq_prod img{
+            width: 100%;
+        }
+        #right{
+            position: relative;
+        }
+        .div2{
+            margin-top: 22px;
+            background-color: #6e42e5;
+            width: 60px;
+            height: 30px;
+        }
+        .minus, .plus,.span{
+            background-color: #6e42e5;
+            border: 0px;
+            color: white;
+            font-size: 20px;
+
+        }
+        #tip1,#tip2,#tip3,#tip4{
+            background-color: #EDF7F2;
+            border: 0px;
+            padding: 10px;
+            color: rgb(129, 185, 129);
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="first">
+            <button id="back">&#8592</button>
+            <h3 style="margin-top: 38px;">Summary</h3>
+        </div>
+        <hr style="height: 1px; color: gray;">
+        <div id="main">
+            <div id="left">
+                <div id="products"></div>
+                <hr style="height: 1px; color: gray;">
+                <h3>Frequently added together</h3>
+                <div id="freq_prod"></div>
+                
+            </div>
+            <div id="right">
+                <h3>Payment summary</h3>
+                <div class="r1">
+                    <h5>Item total</h5>
+                    <p id="totalPrice"></p>
+                </div>
+                <div class="r1">
+                    <h5>Convenience fee</h5>
+                    <p id="convenience">70</p>
+                </div>
+                <hr style="height: 1px; color: gray;">
+                <div class="r1">
+                    <h5>Total</h5>
+                    <p id="total"></p>
+                </div>
+                <hr style="height: 3px; color: gray;">
+                <h3>Add a tip to thank the Professional</h3>
+                <div>
+                    <button id="tip1" onclick="add_tip1()"> 30</button>
+                    <button id="tip2" onclick="add_tip2()">50</button>
+                    <button id="tip3" onclick="add_tip3()">100</button>
+                    <button id="tip4"onclick="add_tip4()"> 150</button>
+                </div>
+                <hr style="height: 3px;">
+                <div style="padding: 5px; position: fixed; width: 20%; margin-top: auto; box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;">
+                    <div style="background-color: #EDF7F2;">
+                        <p style="padding: 5px; color: rgb(129, 185, 129); font-size: 18px;">&#8377 75 plus discount applied</p>
+                    </div>
+                    <div  style="display: flex; justify-content:space-between">
+                        <p id="showAmt"></p>
+                        <button onclick="next_page()" style="width: 170px; background-color:#6e42e5; color: white; padding: 8px; border:0px; font-weight: 600;">Proceed -></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+         
+    </div>
+</body>
+</html>
+<script src="./summary.js"></script>
+<!-- <script>
+    let showAmt = document.getElementById('showAmt');
+    let tip = document.getElementsByClassName('tip')
+    function add_tip(){
+        showAmt.innerText = +total.innerText+tip.innerText;
+    }
+    let freq_prod = document.getElementById('freq_prod');
+    let data = [{
+    "head": "Glow Getter",
+    "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_128,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1657524725157-0eea37.png",
+    "price": "1049",
+    "com1": "Crave beauty dazzling dimond facial",
+    "com2": "Upper lip threading"
+  },
+  {
+    "head": "Mani-pedi special",
+    "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_128,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1657524725157-0eea37.png",
+    "price": " 899",
+    "com1": "Deluxe manicure(4-step)",
+    "com2": "Eyebrow threading"
+  },
+  {
+    "head": "Complete chocolate waxing",
+    "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_128,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1657100969960-ef6f74.png",
+    "price": " 599",
+    "com1": "full harms(chocolate) + (underharms(honey)",
+    "com2": "Eyebrow threading"
+  },
+  {
+    "head": "Complete honey waxing",
+    "image": "https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_128,dpr_1,fl_progressive:steep,q_auto,c_limit/images/growth/luminosity/1657100965594-2ddc55.png",
+    "price": " 1799",
+    "com1": "full legs honey",
+    "com2": "Eyebrow threading"
+  }];
+  function freqProduct(){
+    freq_prod.innerHTML = null;
+    data.forEach((el,i)=>{
+        let div = document.createElement('div');
+        let img = document.createElement('img');
+        img.src=el.image;
+
+        let p = document.createElement('p');
+        p.innerText = el.com1+el.com2;
+
+        let price = document.createElement('p');
+        price.innerText = el.price;
+
+        div.append(img,p,price);
+        freq_prod.append(div)
+
+    });
+}
+freqProduct();
+</script> -->

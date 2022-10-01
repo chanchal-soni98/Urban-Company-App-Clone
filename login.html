@@ -11,11 +11,12 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
  </head>
  
- <body>
-    <div class="container">
+ <body background="./images/login.png">
+  
+    <div class="sidebar">
 
         <div id="hidden">
-          <span id="span">&#10005;</span>
+          <span id="span" onclick="back()">&#10005;</span>
           <p id="para"> please login to continue<p/>
         </div>
 
@@ -40,5 +41,8 @@
         console.log(obj);
         localStorage.setItem("data",JSON.stringify(obj));
         window.location.href="otp.html";
+};
+let back=()=>{
+    window.location.href="location.html"
 };
   </script>
