@@ -129,7 +129,8 @@ function AddToCart(el) {
     }
   }
   if (iscartAdded === false) {
-    cartLs.push(obj);
+    console.log(el)
+    cartLs.push(el);
     alert("product Added Successfully");
     localStorage.setItem("cart", JSON.stringify(cartLs));
 
@@ -146,7 +147,7 @@ function AddToCart(el) {
 
   total_price.innerText = "₹" + count;
   total_price.style.fontWeight = "bold";
-  console.log("c", c);
+  // console.log("c", c);
 }
 function view_cart() {
   window.location.href = "./offer.html";

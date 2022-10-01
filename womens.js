@@ -116,7 +116,7 @@ let cart_fun = (el, id) => {
 
   total_price.innerText = "₹" + count;
   total_price.style.fontWeight = "bold";
-  console.log("c", c);
+  // console.log("c", c);
 }
 
     // let view_cart = () => {

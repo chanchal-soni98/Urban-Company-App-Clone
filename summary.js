@@ -6,25 +6,30 @@ back.addEventListener('click',function(){
 function next_page(){
     window.location.href='./address.html'
 }
+let newData=0;
 let cartLs = JSON.parse(localStorage.getItem("cart")) || [];
+
 let totalPrice = document.getElementById('totalPrice');
 
 
 let count = 0;
 for(let i=0;i<cartLs.length;i++){
-    count+=(+cartLs[i].price)
-    // count+=(Number(cartLs[i].price)*(cartLs[i].quantity));
+    count+=(+(cartLs[i].price));
 }
-totalPrice.innerText = count;
+
+console.log(count);
 
 
 let total = document.getElementById('total');
-total.innerText = count+70
-let products = document.getElementById('products');
-let totalCount=1;
+// total.innerText = newData+70;
+
+
 
 let showAmt = document.getElementById('showAmt');
-showAmt.innerText = +(total.innerText)
+// showAmt.innerHTML = newData+70;
+
+
+
 let tip1 = document.querySelector('#tip1').innerText
 function add_tip1(){
     showAmt.innerText = +(total.innerText)+(+tip1);
@@ -44,10 +49,18 @@ function add_tip4(){
 // let amt_obj = JSON.parse(localStorage.getItem('amt_obj'));
 // amt_obj = showAmt.innerText;
 // localStorage.setItem('amt_obj',JSON.stringify(amt_obj))
-
+let products= document.getElementById('products');
 
 function renderData(){
   products.innerHTML=null;
+  newData = cartLs.reduce((acc,el)=>{
+    return acc+(+el.price)*el.quantity;
+},0);
+console.log(newData);
+localStorage.setItem('total',JSON.stringify(newData));
+totalPrice.innerText = newData;
+total.innerText = newData+70;
+showAmt.innerText = newData+70;
   cartLs.forEach((el,i)=>{
     let div = document.createElement('div');
     let h4 = document.createElement('h4');
@@ -103,31 +116,28 @@ renderData();
 
 removerProduct = (i)=>{
     cartLs.splice(i,1);
-    renderData(cartLs);
-    localStorage.setItem('cart',JSON.stringify(cartLs));
-    renderData(cartLs);
+    // renderData(cartLs);
     
+    renderData(cartLs);
 }
 
 let decrement = (i)=>{
     if(cartLs[i].quantity===1){
         return;
     }
-    // let quant = --cartLs[i].quantity;
-     cartLs[i].quantity--;
+    cartLs[i].quantity--;
+    // cartLs[i].quantity--;
     
     //  console.log('q',quant);
     renderData()
-    // localStorage.setItem('cart',JSON.stringify(cartLs))
 }
 let increment = (i)=>{
     if(cartLs[i].quantity===3){
         return;
     }
-    cartLs[i].quantity++
-    // let quant=++cartLs[i].quantity;
-    //console.log('q',quant);
-    // console.log(totalCount);
+    // let quant=++
+    cartLs[i].quantity++;
+   
     renderData()
 }
 
