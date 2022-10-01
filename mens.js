@@ -65,7 +65,7 @@ let renderData = (data) => {
 
     let pri = document.createElement("h3");
     pri.style.marginBottom = "5px";
-    pri.innerText = el.price;
+    pri.innerText = "₹" + el.price;
 
     let off = document.createElement("p");
     off.innerText = el.offer;
@@ -101,7 +101,7 @@ let renderData = (data) => {
   });
 };
 
-let cartLs = JSON.parse(localStorage.getItem("cart")) || [];
+var cartLs = JSON.parse(localStorage.getItem("cart")) || [];
 // let AddToCart = (el) => {
 //   let obj = {
 //     package: el.package,
@@ -113,9 +113,7 @@ let cartLs = JSON.parse(localStorage.getItem("cart")) || [];
 //   localStorage.setItem("product-page", JSON.stringify(cartLs));
 //   // console.log(cartLs);
 // };
-
-function AddToCart(el, id) {
-
+function AddToCart(el) {
   let obj = {
     package: el.package,
     title: el.title,
@@ -131,8 +129,25 @@ function AddToCart(el, id) {
     }
   }
   if (iscartAdded === false) {
-    cartLs.push(el);
+    cartLs.push(obj);
     alert("product Added Successfully");
     localStorage.setItem("cart", JSON.stringify(cartLs));
+
+    // total_price.innerHTML = cartLs.price;
   }
+
+  cartLs = JSON.parse(localStorage.getItem("cart")) || [];
+  let total_price = document.getElementById("total_price");
+  let count = 0;
+  for (let i = 0; i < cartLs.length; i++) {
+    count += +cartLs[i].price;
+  }
+  //let total_price = document.getElementById("total_price");
+
+  total_price.innerText = "₹" + count;
+  total_price.style.fontWeight = "bold";
+  console.log("c", c);
+}
+function view_cart() {
+  window.location.href = "./offer.html";
 }
