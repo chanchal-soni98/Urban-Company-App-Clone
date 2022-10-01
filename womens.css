@@ -162,13 +162,41 @@ div>p{
     left: 50%;
 }
 #woma_final {
-    border: 1px solid teal;
+    /* border: 1px solid teal;
     height:50px;
-    width:330px;
-    margin-top: 1200px;
+    width:70px; */
+    /* margin-top: 1200px; */
     /* position:fixed; */
+    margin-top: 15px;
+    margin-left: 10px;
 
 }
 /* .last_b{
     margin-left: 200px;
 } */
+/* #womamsg {
+   
+} */
+.wicket {
+    color: #0699A3;
+    font:12px os_semi_bold;
+}
+#woma_f {
+    display: flex;
+    padding-left: 30px;
+}
+#wobt {
+    margin-left: 10px;
+    margin-top: 5px;
+    background:#6E42E5;
+    padding:7px 8px;
+    color:#FFFFFF;
+    font:14px os_semi_bold;
+}
+.womasree {
+    margin-top: 1200px;
+    background: #07794c;
+    padding:8px 16px;
+    width:60%;
+
+}
