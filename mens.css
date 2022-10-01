@@ -98,7 +98,7 @@
   border-radius: 1.5%;
 }
 #ucslideSecond button {
-  /* position: absolute; */
+  position: absolute;
   top: 47%;
   width: 3%;
   height: 6%;
@@ -279,16 +279,15 @@ border-left: 1px solid lightgray;
   width: 20%;
   padding: 10px;
   gap: 40px;
-  /* border: 1px solid red; */
-  /* font-size: 20px; */
-  /* margin-left: 65%; */
   text-align: center;
-  /* position: fixed; */
   margin-top: 100px;
+  /* background-color: aqua;
+  display: block; */
 }
 #total_amt>p{
   margin-top: 10px;
-  font-size: 22px;
+  font-size: 30px;
+  font-weight: bold;
 }
 #total_amt>button{
   width: 60%;
@@ -331,10 +330,19 @@ border-left: 1px solid lightgray;
   margin-bottom: 20px;
 }
 #uclogo_face{
-  display: flex;
-  width: 40%;
-  /* border-radius: 50%; */
+  /* display: flex; */
+  width: 10%;
 }
-#uclogo_face>div+i{
-  background-color: white;
+
+#uclogo_face div{
+  display: flex;
+  margin-top: 20px;
+  margin-left: 10px;
+  gap: 20px;
+}
+#uclogo_face div{
+  display: flex;
+}
+#uc_button_view_cart{
+  background-color: none;
 }

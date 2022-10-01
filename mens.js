@@ -136,9 +136,8 @@ function AddToCart(el) {
 
     // total_price.innerHTML = cartLs.price;
   }
-
-  cartLs = JSON.parse(localStorage.getItem("cart")) || [];
   let total_price = document.getElementById("total_price");
+  cartLs = JSON.parse(localStorage.getItem("cart")) || [];
   let count = 0;
   for (let i = 0; i < cartLs.length; i++) {
     count += +cartLs[i].price;
