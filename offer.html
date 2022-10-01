@@ -7,8 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        
         #container{
-            width: 70%;
+            width: 80%;
             margin: auto;
         }
         #back{
@@ -117,22 +118,22 @@
 
                 <h2>Plus in numbers</h2>
                 <div id="plus">
-                    <div style="background-color: rgb(155, 173, 128)">
+                    <div style="background-color: #EDF7F2">
                         <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1636439415809-5d388a.png" alt="" loading="lazy" style="object-fit: contain;">
                         <h5>&#8377 64 crores</h5>
                         <p>Saved by Plus members</p>
                     </div>
-                    <div style="background-color: rgb(114, 98, 114);">
+                    <div style="background-color: #F2F0FF;">
                         <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1632141247283-8d8f28.png" alt="" loading="lazy" style="object-fit: contain;">
                         <h5>8.6 lakh+</h5>
                         <p>Happy Plus members</p>
                     </div>
-                    <div style="background-color: rgb(153, 153, 100);">
+                    <div style="background-color: #FFF7D6;">
                         <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1632141246979-dd9c03.png" alt="" loading="lazy" style="object-fit: contain;">
                         <h5>4.84</h5>
                         <p>Average rating of Plus...</p>
                     </div>
-                    <div style="background-color: rgb(221, 166, 175);">
+                    <div style="background-color: #FDF3F2;">
                         <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,w_23,dpr_1,fl_progressive:steep,q_auto/images/growth/customer-subscription/1636439411103-0f65a2.png" alt="" loading="lazy" style="object-fit: contain;">
                         <h5>6.3</h5>
                         <p>Average bookings per..</p>
@@ -197,7 +198,7 @@
                     <p>BOUGHT 6 LAKH+ Times</p>
                     <div class="plan">
                         <h3 style="margin-left: -55px;">12 months</h3>
-                        <button onclick="add()" id="adddd" style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
+                        <button onclick="add()" id="adddd" style="width: 50px; border: 0px; color: #6e42e5; background-color: white; font-size: 18px;">Add</button>
                     </div>
                     <p>&#8377 299</p>
                 </div>
@@ -205,23 +206,23 @@
                     
                     <div class="plan">
                         <h3 style="margin-left: -55px;">6 months</h3>
-                        <button onclick="add1()" id="addd" style="width: 50px; border: 0px; color: blueviolet; background-color: white; font-size: 18px;">Add</button>
+                        <button onclick="add1()" id="addd" style="width: 50px; border: 0px; color: #6e42e5; background-color: white; font-size: 18px;">Add</button>
                     </div>
                     <p>&#8377 249</p>
                 </div>
                     
                 <div>
-                    <h3 style="text-align: center; color: rgb(105, 32, 32);">No, I will pay full price -></h3>
+                    <h3 id="nextPage" style="text-align: center; color: rgb(105, 32, 32);">No, I will pay full price &#8594</h3>
                 </div>
 
                 <hr style="height: 3px;">
-                <div style="padding: 5px; position: fixed; width: 20%; margin-top: auto; box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;">
-                    <div style="background-color: rgb(108, 120, 108); border-radius: 5%;">
-                        <p style="padding: 5px; color: aliceblue; font-size: 18px;">&#8377 75 plus discount applied</p>
+                <div style="padding: 5px; width: 100%; margin-top: auto; box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;">
+                    <div style="background-color:#EDF7F2;">
+                        <p style="padding: 5px;  font-size: 18px;">&#8377 75 plus discount applied</p>
                     </div>
                     <div  style="display: flex; justify-content:space-between">
                         <p>&#8377 723</p>
-                        <button onclick="next_page()" style="background-color:blueviolet; color: white; padding: 8px; border:0px;">Proceed -></button>
+                        <button onclick="next_page()" style="background-color:#6e42e5; color: white; padding: 8px; border:0px;">Proceed &#8594</button>
                     </div>
                 </div>
             </div>
@@ -230,6 +231,14 @@
 </body>
 </html>
 <script>
+    let nextPage = document.getElementById('nextPage');
+    nextPage.addEventListener('click',function(){
+        window.location.href="./summary.html"
+    });
+    let prev_page = document.getElementById('back');
+    prev_page.addEventListener('click',function(){
+        window.location.href="./mens.html";
+    })
 
     let next_page = ()=>{
         window.location.href="./summary.html"

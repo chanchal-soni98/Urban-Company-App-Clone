@@ -113,7 +113,7 @@ let cartLs = JSON.parse(localStorage.getItem("cart")) || [];
 //   localStorage.setItem("product-page", JSON.stringify(cartLs));
 //   // console.log(cartLs);
 // };
-function AddToCart(el) {
+function AddToCart(el,id) {
   let obj = {
     package: el.package,
     title: el.title,
@@ -129,7 +129,8 @@ function AddToCart(el) {
     }
   }
   if (iscartAdded === false) {
-    cartLs.push(obj);
+    console.log(el)
+    cartLs.push(el);
     alert("product Added Successfully");
     localStorage.setItem("cart", JSON.stringify(cartLs));
   }
