@@ -91,8 +91,9 @@
     font:12px os_regular;
 }
 .phe {
-  color:#0F0F0F;
-  font:12px os_bold;  
+  Color:#0F0F0F;
+  Font:24px os_bold;
+
 }
 #woma_mid {
     display: flex;
@@ -110,15 +111,14 @@ border-right: 1px solid gray; */
 
 }
 
-#btn1 {
-    /* display: flex; */
-    /* margin-top: 30px; */
-    /* background-color: rgb(173, 173, 254); */
-    /* margin-right:-500px; */
-    background:#FFFFFF;
-    /* font:rgb(94, 94, 185) */
-    margin: 0px 0px 0px 0px;
-    padding:0px 0px 0px 0px;
+.btn1 {
+
+    Background:#FFFFFF;
+    height:25px;
+    color:rgb(36, 36, 86);
+    border:1px solid gray;
+
+
 
     
 }
@@ -197,4 +197,13 @@ div>p{
     display: flex;
     gap:20px;
     margin-top: 1200px;
+    position: static;
+}
+#btt {
+    Color:#FFFFFF;
+    Font: 14px os_semi_bold;
+    Background:#6E42E5;
+    Padding: 14px 16px;
+    border:0px;
+    border-radius: 5px;
 }
