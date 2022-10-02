@@ -30,9 +30,11 @@
       }
       #arrow {
         padding-top: 20px;
+        padding-left: .625rem;
       }
       #h3 {
         margin-left: 20px;
+        
       }
       #cont1 {
         height: 120px;
@@ -93,7 +95,7 @@
         <span id="arrow">&#8592;</span>
         <h3 id="h3">Select payment method</h3>
         <div id="hard">
-          <p>amount to pay:₹698</p>
+          <p id="payAmt"></p>
         </div>
       </div>
 
@@ -151,4 +153,5 @@
   let pay = () => {
     window.location.href = "payment1.html";
   };
+  let payAmt = document.getElementById(`payAmt`);
 </script>
