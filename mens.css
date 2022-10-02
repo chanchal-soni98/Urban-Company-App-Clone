@@ -9,6 +9,7 @@
   height: 100%;
   /* position: relative;  */
 }
+
 #ucnavbar {
   /* border: 6px solid black; */
   display: flex;
@@ -345,4 +346,7 @@ border-left: 1px solid lightgray;
 }
 #uc_button_view_cart{
   background-color: none;
+}
+#left-btn{
+  margin-left: -50px;
 }

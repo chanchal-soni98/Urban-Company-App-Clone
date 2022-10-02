@@ -25,7 +25,6 @@
         <img src="./images/maps.png" alt="">
     </div>
     <div class="content">
-        
         <div class="div_1">
             <h3>University Rd</h3>
             <p>University Rd, University Area,Ahmedabad, Gujarat 380009, India
@@ -51,9 +50,15 @@
    </div>
 </body>
 </html>
-<script>
+<script >
     let mainbtn = document.getElementById(`mainbtn`);
     mainbtn.addEventListener('click', (e) => {
         window.location.href  = "./payment.html"
     });
+
+    let xsym = document.getElementById(`xsym`);
+    xsym.addEventListener('click', (e) => {
+        window.location.href = "./summary.html";
+    });
+
 </script>
