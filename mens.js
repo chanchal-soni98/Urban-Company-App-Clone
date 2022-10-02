@@ -123,15 +123,15 @@ function AddToCart(el) {
   let iscartAdded = false;
   for (let i = 0; i < cartLs.length; i++) {
     if (cartLs[i].id === obj.id) {
-      alert("product already in the Cart");
+      alert("Package already in the Cart");
       iscartAdded = true;
       break;
     }
   }
   if (iscartAdded === false) {
-    console.log(el)
+    console.log(el);
     cartLs.push(el);
-    alert("product Added Successfully");
+    alert("Package Added Successfully");
     localStorage.setItem("cart", JSON.stringify(cartLs));
 
     // total_price.innerHTML = cartLs.price;
