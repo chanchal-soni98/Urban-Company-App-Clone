@@ -119,9 +119,9 @@ let cart_fun = (el, id) => {
   // console.log("c", c);
 }
 
-    // let view_cart = () => {
-    //     window.location.href="";
-    // }
+    function view_cart() {
+        window.location.href="./offer.html";
+    }
 
 
 
