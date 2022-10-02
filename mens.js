@@ -144,7 +144,7 @@ function AddToCart(el) {
   }
   //let total_price = document.getElementById("total_price");
 
-  total_price.innerText = "₹" + count;
+  total_price.innerText = "₹ " + count;
   total_price.style.fontWeight = "bold";
   // console.log("c", c);
 }

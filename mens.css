@@ -213,6 +213,17 @@ border-left: 1px solid lightgray;
   margin-bottom: 20px;
  /* position: relative; */
 }
+
+#uc-container-offer div:last-child{
+  background-color: white;
+ /* position: fixed;  */
+}
+#uc-container-offer div:last-child p{
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-top: 12px;
+}
 #uc-container-offer>div{
  /* position:initial; */
   /* border:  1px solid red; */
