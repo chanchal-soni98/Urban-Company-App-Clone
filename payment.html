@@ -1,134 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>payment</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://res.cloudinary.com/urbanclap/image/upload/v1467812027/uc_logo.png"
+    />
     <style>
-        #container{
-         width: 40%;
-          border: 1px solid white;
-         margin: auto;
-         
-        }
-        #cont{
-            display: flex;
-            height: 60px;
-            /* border: 1px solid black; */
-            margin-top: 20px;
+      * {
+        font-family: axiforma-regular, -apple-system, BlinkMacSystemFont,
+          "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      #container {
+        width: 40%;
+        border: 1px solid white;
+        margin: auto;
+      }
+      #cont {
+        display: flex;
+        height: 60px;
+        /* border: 1px solid black; */
+        margin-top: 20px;
+
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      #arrow {
+        padding-top: 20px;
+        padding-left: .625rem;
+      }
+      #h3 {
+        margin-left: 20px;
         
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        }
-        #arrow{
-            padding-top: 20px;
-         }
-         #h3{
-            margin-left: 20px;
-         }
-         #cont1{
-            height: 120px;
-            /* border: 1px solid black; */
-            margin-top: 20px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-         }
-         #head1{
-            margin-left: 40px;
-         }
-         #child1{
-            height: 50px;
-            /* border: 1px solid black; */
-            display: flex;
-         }
-         #spa{
-            margin-left: 300px;
-            padding-top: 13px;
-            font-size: 22px;
-         }
-         #cont2,#cont3,#cont4{
-            height: 120px;
-            /* border: 1px solid black; */
-            margin-top: 20px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-         }
-#spa2{
-    margin-left: 330px;
-    font-size: 22px;
-    padding-top: 13px;
-}
-#spa3{
-    margin-left: 220px;
-    font-size: 22px;
-    padding-top: 13px;
-}
-#spa4{
-    margin-left: 285px;
-    font-size: 22px;
-    padding-top: 13px;
-}
-#card{
-    margin-left: 10px;
-    cursor: pointer;
-}
-#hard{
- margin-left: -179px;
-margin-top: 25px;
-font-size: small;
-}
-</style>
-</head>
-<body>
-<div id="container">
+      }
+      #cont1 {
+        height: 120px;
+        /* border: 1px solid black; */
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      #head1 {
+        margin-left: 40px;
+      }
+      #child1 {
+        height: 50px;
+        /* border: 1px solid black; */
+        display: flex;
+      }
+      #spa {
+        margin-left: 300px;
+        padding-top: 13px;
+        font-size: 22px;
+        font-weight: 1000;
+      }
+      #cont2,
+      #cont3,
+      #cont4 {
+        height: 120px;
+        /* border: 1px solid black; */
+        margin-top: 20px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+      }
+      #spa2 {
+        margin-left: 330px;
+        font-size: 22px;
+        padding-top: 13px;
+        font-weight: 1000;
+      }
+      #spa3 {
+        margin-left: 220px;
+        font-size: 22px;
+        padding-top: 13px;
+        font-weight: 1000;
+      }
+      #spa4 {
+        margin-left: 285px;
+        font-size: 22px;
+        padding-top: 13px;
+        font-weight: 1000;
+      }
+      #card {
+        margin-left: 10px;
+        cursor: pointer;
+      }
+      #hard {
+        margin-left: -179px;
+        margin-top: 30px;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="cont">
+        <span id="arrow">&#8592;</span>
+        <h3 id="h3">Select payment method</h3>
+        <div id="hard">
+          <p id="payAmt"></p>
+        </div>
+      </div>
 
-    <div id="cont">
-    <span id="arrow">&#8592;</span>
-    <h3 id="h3">Select payment method</h3>
-    <div id="hard">
-      <p>amount to pay:₹698</p>
-    </div>
-   </div>
+      <div id="cont1">
+        <h3 id="head1">Debit or Credit card</h3>
+        <div id="child1">
+          <img
+            src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,q_auto:low,f_auto,dpr_1.25/images/monet/customer-app-monet/1622015769641-3fc187.png"
+            alt=""
+          />
+          <p onclick="pay()" id="card">Add a Card</p>
+          <span id="spa"> > </span>
+        </div>
+      </div>
 
-    <div id="cont1">
-    <h3 id="head1">Debit or Credit card</h3>
-    <div id="child1">
-     <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,q_auto:low,f_auto,dpr_1.25/images/monet/customer-app-monet/1622015769641-3fc187.png" alt="">
-     <p onclick="pay()" id="card">add a card</p>
-     <span id="spa"> > </span>
-    </div>
-    </div>
-
-    <div id="cont2">
+      <div id="cont2">
         <h3 id="head1">Wallet</h3>
         <div id="child1">
-         <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,q_auto:low,f_auto,dpr_1.25/images/monet/customer-app-monet/1622035139912-c6c7d1.png" alt="">
-         <p id="card">paytm</p>
-         <span id="spa2"> > </span>
+          <img
+            src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,q_auto:low,f_auto,dpr_1.25/images/monet/customer-app-monet/1622035139912-c6c7d1.png"
+            alt=""
+          />
+          <p id="card">Paytm</p>
+          <span id="spa2"> > </span>
         </div>
-    </div>
+      </div>
 
-    <div id="cont3">
+      <div id="cont3">
         <h3 id="head1">UPI</h3>
         <div id="child1">
-         <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,q_auto:low,f_auto,dpr_1.25/images/monet/customer-app-monet/1622035138755-c9ea9d.png" alt="">
-         <p id="card">pay via another UPI ID</p>
-         <span id="spa3"> > </span>
+          <img
+            src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,q_auto:low,f_auto,dpr_1.25/images/monet/customer-app-monet/1622035138755-c9ea9d.png"
+            alt=""
+          />
+          <p id="card">Pay via another UPI ID</p>
+          <span id="spa3"> > </span>
         </div>
-    </div>
+      </div>
 
-    <div id="cont4">
+      <div id="cont4">
         <h3 id="head1">NETbanking</h3>
         <div id="child1">
-         <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,q_auto:low,f_auto,dpr_1.25/images/monet/customer-app-monet/1622015760056-139840.png" alt="">
-         <p id="card">see all banks</p>
-         <span id="spa4"> > </span>
+          <img
+            src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category,q_auto:low,f_auto,dpr_1.25/images/monet/customer-app-monet/1622015760056-139840.png"
+            alt=""
+          />
+          <p id="card">See all banks</p>
+          <span id="spa4"> > </span>
         </div>
+      </div>
     </div>
-
-</div>    
-</body>
+  </body>
 </html>
 <script>
-    let pay=()=>{
-        window.location.href="payment1.html"
-    }
+  let pay = () => {
+    window.location.href = "payment1.html";
+  };
+  let payAmt = document.getElementById(`payAmt`);
 </script>

@@ -17,6 +17,7 @@ body {
   position: relative;
   top: 35px;
   left: 440px;
+  cursor: pointer;
  
 }
 #xsym i{

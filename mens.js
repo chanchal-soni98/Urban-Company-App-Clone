@@ -129,7 +129,8 @@ function AddToCart(el) {
     }
   }
   if (iscartAdded === false) {
-    cartLs.push(obj);
+    console.log(el)
+    cartLs.push(el);
     alert("product Added Successfully");
     localStorage.setItem("cart", JSON.stringify(cartLs));
 
