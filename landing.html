@@ -1,82 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Urban Company</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://res.cloudinary.com/urbanclap/image/upload/v1467812027/uc_logo.png"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./style/lan_1.css" />
-    <style>
-      .h3_a2 a{
-    text-decoration: none;
-    color: white;
-  }
-    </style>
 
-  </head>
-  <body>
-    <!-- navbar -->
-    <div id="nav_1">
-      <div>
-        <img src="./images/urban logo.png" alt="" />
-      </div>
-      <div>
-        <h3>Blog</h3>
-        <h3 class="h3">Register As A Professional</h3>
-        <h3 class="h3_a2"> <a href="./login.html">Login / Sign Up</a></h3>
-      </div>
-    </div>
-    <div id="location">
-      <div><h2>Where do you need a service?</h2></div>
-      <div>
-        <select name="" id="city">
-          <option value="">Select your city</option>
-          <option value="Mumbai">Mumbai</option>
-          <option value="Delhi">Delhi</option>
-          <option value="Bangalore">Bangalore</option>
-          <option value="Hyderabad">Hyderabad</option>
-          <option value="Ahmedabad">Ahmedabad</option>
-          <option value="Chennai">Chennai</option>
-        </select>
-      </div>
-    </div>
-    <!-- landing  page image-->
-    <div id="img_div_2">
-      <img src="./images/landing page.png" alt="" />
-      <img src="./images/mid2.png" alt="" />
-      <img src="./images/mid3.png" alt="" />
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urban Company</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://res.cloudinary.com/urbanclap/image/upload/v1467812027/uc_logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style/lan_1.css" />
+  <style>
+    .h3_a2 a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
 
-    <!-- footer  part-->
-    <div id="footer">
-     
+</head>
+
+<body>
+  <!-- navbar -->
+  <div id="nav_1">
+
+    <div>
+      <img src="./images/urban logo.png" alt="" />
+    </div>
+    <div>
+      <h3>Blog</h3>
+      <h3 class="h3">Register As A Professional</h3>
+      <h3 class="h3_a2"> <a href="./login.html">Login / Sign Up</a></h3>
+    </div>
+  </div>
+
+  <div id="main_1">
+    <div>
+      <img src="./images/landing.png" alt="">
+    </div>
+    <div class="cont">
+      <h2>URBAN COMPANY</h2>
+      <h1>Quality home services, on demand</h1>
+      <p>Experienced, hand-picked Professionals to serve you at your doorstep</p>
+      <div id="location">
+        <div>
+          <h2>Where do you need a service?</h2>
+        </div>
+        <div>
+          <select name="" id="city">
+            <option value="">Select your city</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Ahmedabad">Ahmedabad</option>
+            <option value="Chennai">Chennai</option>
+          </select>
+        </div>
       </div>
     </div>
-  </body>
+  </div>
+  <!-- landing  page image-->
+  <div id="img_div_2">
+    <img src="./images/mid2.png" alt="" />
+    <img src="./images/mid3.png" alt="" />
+  </div>
+
+  <!-- footer  part-->
+  <div id="footer">
+
+  </div>
+  </div>
+</body>
+
 </html>
 <script>
 
-console.log(city);
+  console.log(city);
 
-city.addEventListener('change', (e) => {
-  let city = document.getElementById(`city`).value;
+  city.addEventListener('change', (e) => {
+    let city = document.getElementById(`city`).value;
     window.location.href = "./location.html"
-});
+  });
 
 </script>
 <script type="module">
 
-  import {footer} from "./scripts/footer.js"
+  import { footer } from "./scripts/footer.js"
 
-document.getElementById(`footer`).innerHTML = footer();
+  document.getElementById(`footer`).innerHTML = footer();
 
-</script>  
+</script>
