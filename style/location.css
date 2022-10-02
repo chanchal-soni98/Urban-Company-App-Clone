@@ -4,7 +4,9 @@
   font-family: "axiforma-regular", -apple-system, "BlinkMacSystemFont",
     "Segoe UI", "Roboto", Helvetica, Arial, sans-serif;
 }
-
+#logout{
+cursor: pointer;
+}
 #navbar {
   /* border: 1px solid red; */
   display: flex;

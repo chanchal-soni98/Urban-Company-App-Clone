@@ -1,17 +1,15 @@
 
-/* *{
-    font-size: 16px;
-    font-family:axiforma-regular, 
-} */
+*{
+    font-family: "axiforma-regular", -apple-system, "BlinkMacSystemFont",
+    "Segoe UI", "Roboto", Helvetica, Arial, sans-serif;
+}
   body{
     width:80%;
     margin: auto;
-<<<<<<< HEAD
-    margin-top: 25px;
-=======
+    
+    /* margin-top: 25px; */
+/* ======= */
     margin-top: 20px;
-
->>>>>>> db73412ef844f93d3ea98e5417dfa64df27a3673
 }
 
 #woma_navbar {
@@ -207,15 +205,22 @@ div>p{
 }
 #btt {
     Color:#FFFFFF;
+    width: 70%;
     Font: 14px os_semi_bold;
     Background:#6E42E5;
     Padding: 14px 16px;
     border:0px;
     border-radius: 5px;
-    /* margin-top: 200px; */
+   margin-top: -50px;
+   font-size: 20px;
+   height: 50px;
 }
 #best {
     padding-left: 45px;
+}
+#total_price{
+    font-size: 20px;
+    margin-top: -35px;
 }
 
 #uc_footer{

@@ -8,19 +8,9 @@ let url = "https://lit-wildwood-25489.herokuapp.com/api/UrbanCompany"
 
 let getData = async () => {
 
-<<<<<<< HEAD
-    let res = await fetch(url)
-    res = await res.json();
-    console.log('res:', res)
-   
-    render_dom(res)
-=======
   let res = await fetch(url)
   res = await res.json();
-
   render_dom(res)
->>>>>>> db73412ef844f93d3ea98e5417dfa64df27a3673
-
 }
 getData()
 
