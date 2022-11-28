@@ -1,5 +1,5 @@
 # Urban Company Website.
-It is a E-commerce website. 
+It is an E-commerce website. 
 Collaborative Project  accomplished with 4 developers.
 Duration: 5 days.
 Tech stack: HTML, CSS, JavaScript and JSON server
